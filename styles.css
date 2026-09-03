@@ -45,8 +45,7 @@ nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
   min-height: 74vh; display: flex; align-items: flex-end;
   background-color: #686868;
   background-image:
-    linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.52)),
-    url("files/main-hero.jpg");
+    linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.52));
   background-size: cover; background-position: center;
 }
 .hero-inner {
