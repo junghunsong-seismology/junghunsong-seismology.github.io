@@ -4,199 +4,186 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Jung-Hun Song</title>
-  <meta name="description" content="Publications by Jung-Hun Song in planetary seismology, earthquake source physics, seismic imaging, and Earth and planetary interiors." />
-  <style>
-    :root {
-      --bg: #f7f6f2;
-      --paper: #ffffff;
-      --text: #1c1c1c;
-      --muted: #66645f;
-      --line: #d9d7d0;
-      --tag-bg: #ebe9e2;
-      --max: 1080px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
-    header {
-      background: rgba(247,246,242,.96);
-      border-bottom: 1px solid var(--line);
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(8px);
-    }
-    .header-inner {
-      min-height: 82px; display: flex; align-items: center;
-      justify-content: space-between; gap: 24px;
-    }
-    .site-name { text-decoration: none; font-size: 1.18rem; font-weight: 650; letter-spacing: .01em; white-space: nowrap; }
-    nav { display: flex; gap: 28px; flex-wrap: wrap; justify-content: flex-end; }
-    nav a { text-decoration: none; color: #333; font-size: .92rem; }
-    nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
-    footer { padding: 38px 0 56px; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
-    .tag {
-      display: inline-block; padding: 4px 9px; background: var(--tag-bg);
-      border-radius: 999px; color: #55524b; font-size: .72rem;
-      line-height: 1.2; letter-spacing: .02em;
-    }
-    @media (max-width: 800px) {
-      .header-inner { align-items: flex-start; flex-direction: column; padding: 18px 0; }
-      nav { gap: 18px; }
-    }
-    @media (max-width: 520px) {
-      .wrap { width: min(100% - 30px, var(--max)); }
-    }
-
-    .page-head { padding: 100px 0 70px; border-bottom: 1px solid var(--line); }
-    .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--muted); font-weight: 650; margin: 0 0 18px; }
-    h1 { font-size: clamp(3.2rem,7vw,6.5rem); line-height: .98; letter-spacing: -.05em; font-weight: 500; margin: 0; }
-    .intro { max-width: 760px; margin-top: 28px; color: #484848; font-size: 1.08rem; }
-    .quick-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; font-size: .92rem; }
-    .content { padding: 70px 0 100px; }
-    .year-group { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 36px; padding: 34px 0 52px; border-top: 1px solid var(--line); }
-    .year { font-size: 1.3rem; font-weight: 650; position: sticky; top: 110px; align-self: start; }
-    .paper { padding: 0 0 30px; margin: 0 0 30px; border-bottom: 1px solid var(--line); }
-    .paper:last-child { margin-bottom: 0; }
-    .paper-title { margin: 0 0 7px; font-size: 1.18rem; font-weight: 650; line-height: 1.38; }
-    .authors { margin: 0 0 5px; color: #444; }
-    .journal { margin: 0; color: var(--muted); }
-    .links { margin-top: 10px; font-size: .92rem; }
-    .status { display: inline-block; margin-left: 8px; padding: 2px 8px; border: 1px solid #aaa; border-radius: 999px; font-size: .76rem; color: #555; vertical-align: 1px; font-weight: 500; }
-    .note { margin-top: 50px; color: var(--muted); font-size: .92rem; }
-    @media (max-width: 760px) {
-      .year-group { grid-template-columns: 1fr; gap: 18px; }
-      .year { position: static; }
-    }
-    @media (max-width: 520px) { .page-head { padding-top: 70px; } }
-</style>
+  <meta name="description" content="Publications by Jung-Hun Song in planetary seismology, earthquake source physics, seismic imaging, and planetary interiors." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
 <header>
   <div class="wrap header-inner">
     <a class="site-name" href="index.html">Jung-Hun Song</a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html#about">About</a>
       <a href="index.html#research">Research</a>
       <a href="publications.html">Publications</a>
-      <a href="index.html#news">News</a>
+      <a href="data-software.html">Data &amp; Software</a>
       <a href="index.html#contact">Contact</a>
-      <a href="CV_JungHunSong.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="files/CV_JungHunSong.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </div>
 </header>
+
+
 <main>
   <section class="page-head">
     <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Publications</p>
       <p class="eyebrow">Research output</p>
       <h1>Publications</h1>
-      <p class="intro">Peer-reviewed publications and current manuscripts. My name is highlighted in each author list; topic tags indicate the main research area of each paper.</p>
-      <div class="quick-links">
+      <p class="page-intro">Peer-reviewed publications and current manuscripts. Published-paper links are consistently routed through DOI.</p>
+      <div class="contact-row">
         <a href="https://orcid.org/0000-0002-3496-4436" target="_blank" rel="noopener">ORCID ↗</a>
-        <a href="CV_JungHunSong.pdf" target="_blank" rel="noopener">Full CV ↗</a>
+        <a href="https://www.webofscience.com/wos/author/rid/T-8072-2018" target="_blank" rel="noopener">Web of Science ↗</a>
+        <a href="files/CV_JungHunSong.pdf" target="_blank" rel="noopener">Full CV ↗</a>
       </div>
     </div>
   </section>
-  <section class="content"><div class="wrap"><div class="year-group"><div class="year">2026</div><div><article class="paper">
+  <section class="detail-section">
+    <div class="wrap">
+    <div class="year-group">
+      <div class="year">2026</div>
+      <div>
+        <article class="paper">
           <p class="paper-title">New Magnitude Scaling and Seismic Source Characterisation for Marsquakes and Meteoroid Impacts <span class="status">Under review</span></p>
           <p class="authors"><strong>Song, J. H.</strong>, Kim, D., Collins, G. S., Tsai, V. C. &amp; Lognonné, P.</p>
           <p class="journal"><em>Journal of Geophysical Research: Planets</em>.</p>
           <div class="tag-row"><span class="tag">Planetary seismology</span><span class="tag">Source physics</span></div>
           
-        </article><article class="paper">
+        </article>
+        <article class="paper">
           <p class="paper-title">Active crustal straining and fault reactivation at Valles Marineris <span class="status">In revision</span></p>
           <p class="authors"><strong>Song, J. H.</strong>, Kim, D., Kolawole, F., Davis, J. M., Maguire, R. &amp; Parry, R.</p>
           <p class="journal"><em>Nature Communications</em>.</p>
-          <div class="tag-row"><span class="tag">Planetary seismology</span><span class="tag">Mars</span><span class="tag">Source physics</span></div>
+          <div class="tag-row"><span class="tag">Planetary seismology</span><span class="tag">Source physics</span></div>
           
-        </article><article class="paper">
-          <p class="paper-title">Locating Moonquakes With Single-Station Seismology </p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">Locating Moonquakes With Single-Station Seismology</p>
           <p class="authors">Kim, D., <strong>Song, J. H.</strong> &amp; Schmerr, N. C.</p>
           <p class="journal"><em>Geophysical Research Letters</em>.</p>
-          <div class="tag-row"><span class="tag">Planetary seismology</span><span class="tag">Moon</span></div>
-          <p class="links"><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2026GL122962" target="_blank" rel="noopener">Paper ↗</a></p>
-        </article><article class="paper">
-          <p class="paper-title">Continuous Nonthermal Slab Gap Formed by Progressive Tearing Beneath Northeast Asia </p>
+          <div class="tag-row"><span class="tag">Planetary seismology</span></div>
+          <p class="links"><a href="https://doi.org/10.1029/2026GL122962" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">Continuous Nonthermal Slab Gap Formed by Progressive Tearing Beneath Northeast Asia</p>
           <p class="authors"><strong>Song, J. H.</strong>, Kim, S., Tauzin, B. &amp; Rhie, J.</p>
           <p class="journal"><em>Nature Communications</em>.</p>
-          <div class="tag-row"><span class="tag">Seismic imaging</span><span class="tag">Mantle dynamics</span></div>
-          <p class="links"><a href="https://www.nature.com/articles/s41467-026-75246-8" target="_blank" rel="noopener">Paper ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2025</div><div><article class="paper">
-          <p class="paper-title">Seismic and Mineralogical Evidence for an Iron-Rich Mega Ultralow-Velocity Zone Beneath Hawai'i </p>
+          <div class="tag-row"><span class="tag">Mantle dynamics</span><span class="tag">Seismic imaging</span></div>
+          <p class="links"><a href="https://doi.org/10.1038/s41467-026-75246-8" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2025</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Seismic and Mineralogical Evidence for an Iron-Rich Mega Ultralow-Velocity Zone Beneath Hawai'i</p>
           <p class="authors">Kim, D., <strong>Song, J. H.</strong>, Dobrosavljevic, V. V. &amp; Lekić, V.</p>
           <p class="journal"><em>Science Advances</em>.</p>
-          <div class="tag-row"><span class="tag">Deep Earth</span><span class="tag">Waveform modelling</span></div>
-          <p class="links"><a href="https://doi.org/10.1126/sciadv.adz1962" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2024</div><div><article class="paper">
-          <p class="paper-title">Water and gas geochemistry of springs in Ulleungdo volcano, South Korea: Implications for degassing of upper mantle-derived volatiles in Northeast Asia </p>
+          <div class="tag-row"><span class="tag">Deep mantle</span><span class="tag">Wavefields</span></div>
+          <p class="links"><a href="https://doi.org/10.1126/sciadv.adz1962" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">Water and gas geochemistry of springs in Ulleungdo volcano, South Korea: Implications for degassing of upper mantle-derived volatiles in Northeast Asia</p>
           <p class="authors">Lee, W., Lee, H., Kim, H., <strong>Song, J. H.</strong>, Hong, J., Park, J., ... &amp; Fischer, T. P.</p>
-          <p class="journal"><em>Journal of Hydrology</em>, 647, 132286.</p>
-          <div class="tag-row"><span class="tag">Volcanism</span><span class="tag">Earth processes</span></div>
-          <p class="links"><a href="https://doi.org/10.1016/j.jhydrol.2024.132286" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article><article class="paper">
-          <p class="paper-title">Latent magmatism beneath the Korean Peninsula by asthenosphere upwelling </p>
+          <p class="journal"><em>Journal of Hydrology, 647, 132286</em>.</p>
+          <div class="tag-row"><span class="tag">Volcanism</span><span class="tag">Geochemistry</span></div>
+          <p class="links"><a href="https://doi.org/10.1016/j.jhydrol.2024.132286" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2024</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Latent magmatism beneath the Korean Peninsula by asthenosphere upwelling</p>
           <p class="authors">Kim, H., Lee, H., <strong>Song, J. H.</strong>, Lee, W., Hong, J., Takanori, K., Takahata, N., Sano, Y. &amp; Fischer, T. P.</p>
-          <p class="journal"><em>Communications Earth &amp; Environment</em>, 5, 427.</p>
-          <div class="tag-row"><span class="tag">Volcanism</span><span class="tag">Upper mantle</span></div>
-          <p class="links"><a href="https://doi.org/10.1038/s43247-024-01592-4" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2023</div><div><article class="paper">
-          <p class="paper-title">Crustal and uppermost mantle structures imaged by teleseismic P-wave traveltime tomography beneath the Southeastern Korean Peninsula: implications for a hydrothermal system controlled by the thermally modified lithosphere </p>
+          <p class="journal"><em>Communications Earth & Environment, 5, 427</em>.</p>
+          <div class="tag-row"><span class="tag">Volcanism</span><span class="tag">Mantle dynamics</span></div>
+          <p class="links"><a href="https://doi.org/10.1038/s43247-024-01592-4" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2023</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Crustal and uppermost mantle structures imaged by teleseismic P-wave traveltime tomography beneath the Southeastern Korean Peninsula: implications for a hydrothermal system controlled by the thermally modified lithosphere</p>
           <p class="authors">Lee, S., <strong>Song, J. H.</strong>, Heo, D., Rhie, J., Kang, T. S., Choi, E., ... &amp; Ree, J. H.</p>
-          <p class="journal"><em>Geophysical Journal International</em>, 235(2), 1639–1657.</p>
+          <p class="journal"><em>Geophysical Journal International, 235(2), 1639–1657</em>.</p>
           <div class="tag-row"><span class="tag">Seismic imaging</span><span class="tag">Lithosphere</span></div>
-          <p class="links"><a href="https://doi.org/10.1093/gji/ggad319" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2022</div><div><article class="paper">
-          <p class="paper-title">Moment Tensor Solutions for Earthquakes in the Southern Korean Peninsula Using Three-Dimensional Seismic Waveform Simulations </p>
+          <p class="links"><a href="https://doi.org/10.1093/gji/ggad319" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2022</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Moment Tensor Solutions for Earthquakes in the Southern Korean Peninsula Using Three-Dimensional Seismic Waveform Simulations</p>
           <p class="authors"><strong>Song, J. H.</strong>, Kim, S., Rhie, J. &amp; Park, D.</p>
-          <p class="journal"><em>Frontiers in Earth Science</em>, 1189.</p>
-          <div class="tag-row"><span class="tag">Source physics</span><span class="tag">Waveform modelling</span></div>
-          <p class="links"><a href="https://doi.org/10.3389/feart.2022.945022" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article><article class="paper">
-          <p class="paper-title">Contributions from lithospheric and upper-mantle heterogeneities to upper crustal seismicity in the Korean Peninsula </p>
+          <p class="journal"><em>Frontiers in Earth Science, 1189</em>.</p>
+          <div class="tag-row"><span class="tag">Source physics</span><span class="tag">Waveforms</span></div>
+          <p class="links"><a href="https://doi.org/10.3389/feart.2022.945022" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">Contributions from lithospheric and upper-mantle heterogeneities to upper crustal seismicity in the Korean Peninsula</p>
           <p class="authors">Lee, S., Saxena, A., <strong>Song, J. H.</strong>, Rhie, J. &amp; Choi, E.</p>
-          <p class="journal"><em>Geophysical Journal International</em>, 229(2), 1175–1192.</p>
+          <p class="journal"><em>Geophysical Journal International, 229(2), 1175–1192</em>.</p>
           <div class="tag-row"><span class="tag">Lithosphere</span><span class="tag">Seismicity</span></div>
-          <p class="links"><a href="https://doi.org/10.1093/gji/ggab527" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article><article class="paper">
-          <p class="paper-title">Three-Dimensional Seismic-Wave Propagation Simulations in the Southern Korean Peninsula Using Pseudodynamic Rupture Models </p>
+          <p class="links"><a href="https://doi.org/10.1093/gji/ggab527" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">Three-Dimensional Seismic-Wave Propagation Simulations in the Southern Korean Peninsula Using Pseudodynamic Rupture Models</p>
           <p class="authors">Lee, J., <strong>Song, J. H.</strong>, Kim, S., Rhie, J. &amp; Song, S. G.</p>
-          <p class="journal"><em>Bulletin of the Seismological Society of America</em>, 112(2), 939–960.</p>
-          <div class="tag-row"><span class="tag">Wave propagation</span><span class="tag">Ground motion</span></div>
-          <p class="links"><a href="https://doi.org/10.1785/0120210172" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2021</div><div><article class="paper">
-          <p class="paper-title">Helium isotopes and olivine geochemistry of basalts and mantle xenoliths in Jeju Island, South Korea: Evaluation of role of SCLM on the Cenozoic intraplate volcanism in East Asia </p>
+          <p class="journal"><em>Bulletin of the Seismological Society of America, 112(2), 939–960</em>.</p>
+          <div class="tag-row"><span class="tag">Wavefields</span><span class="tag">Source physics</span></div>
+          <p class="links"><a href="https://doi.org/10.1785/0120210172" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2021</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Helium isotopes and olivine geochemistry of basalts and mantle xenoliths in Jeju Island, South Korea: Evaluation of role of SCLM on the Cenozoic intraplate volcanism in East Asia</p>
           <p class="authors">Kim, D., Lee, H., Lee, W., Kim, J., Oh, J., <strong>Song, J. H.</strong>, Jung, H. &amp; Stuart, F. M.</p>
-          <p class="journal"><em>Lithos</em>, 390, 106123.</p>
+          <p class="journal"><em>Lithos, 390, 106123</em>.</p>
           <div class="tag-row"><span class="tag">Volcanism</span><span class="tag">Lithosphere</span></div>
-          <p class="links"><a href="https://doi.org/10.1016/j.lithos.2021.106123" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article><article class="paper">
-          <p class="paper-title">Trace element and helium isotope geochemistry of the Cenozoic intraplate volcanism in the East Sea (Sea of Japan): Implications for lithosphere-asthenosphere interaction </p>
+          <p class="links"><a href="https://doi.org/10.1016/j.lithos.2021.106123" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article>
+        <article class="paper">
+          <p class="paper-title">Trace element and helium isotope geochemistry of the Cenozoic intraplate volcanism in the East Sea (Sea of Japan): Implications for lithosphere-asthenosphere interaction</p>
           <p class="authors">Lee, W., Lee, H., Kim, D., Kim, J., Oh, J., <strong>Song, J. H.</strong>, Kim, C. H., Park, C. H. &amp; Stuart, F. M.</p>
-          <p class="journal"><em>Lithos</em>, 388, 106075.</p>
+          <p class="journal"><em>Lithos, 388, 106075</em>.</p>
           <div class="tag-row"><span class="tag">Volcanism</span><span class="tag">Lithosphere</span></div>
-          <p class="links"><a href="https://doi.org/10.1016/j.lithos.2021.106075" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2020</div><div><article class="paper">
-          <p class="paper-title">Heterogeneous modification and reactivation of a craton margin beneath the Korean Peninsula from teleseismic travel time tomography </p>
+          <p class="links"><a href="https://doi.org/10.1016/j.lithos.2021.106075" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2020</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Heterogeneous modification and reactivation of a craton margin beneath the Korean Peninsula from teleseismic travel time tomography</p>
           <p class="authors"><strong>Song, J. H.</strong>, Kim, S. &amp; Rhie, J.</p>
-          <p class="journal"><em>Gondwana Research</em>, 81, 475–489.</p>
+          <p class="journal"><em>Gondwana Research, 81, 475–489</em>.</p>
           <div class="tag-row"><span class="tag">Seismic imaging</span><span class="tag">Lithosphere</span></div>
-          <p class="links"><a href="https://doi.org/10.1016/j.gr.2019.11.016" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><div class="year-group"><div class="year">2018</div><div><article class="paper">
-          <p class="paper-title">Imaging of lithospheric structure beneath Jeju Volcanic Island by teleseismic traveltime tomography </p>
+          <p class="links"><a href="https://doi.org/10.1016/j.gr.2019.11.016" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div>
+    <div class="year-group">
+      <div class="year">2018</div>
+      <div>
+        <article class="paper">
+          <p class="paper-title">Imaging of lithospheric structure beneath Jeju Volcanic Island by teleseismic traveltime tomography</p>
           <p class="authors"><strong>Song, J. H.</strong>, Kim, S., Rhie, J., Lee, S. H., Kim, Y. &amp; Kang, T. S.</p>
-          <p class="journal"><em>Journal of Geophysical Research: Solid Earth</em>, 123(8), 6784–6801.</p>
-          <div class="tag-row"><span class="tag">Seismic imaging</span><span class="tag">Lithosphere</span></div>
-          <p class="links"><a href="https://doi.org/10.1029/2018JB015979" target="_blank" rel="noopener">DOI ↗</a></p>
-        </article></div></div><p class="note">Publication list based on the current CV. DOI and paper links are included where supplied in the CV.</p></div></section>
+          <p class="journal"><em>Journal of Geophysical Research: Solid Earth, 123(8), 6784–6801</em>.</p>
+          <div class="tag-row"><span class="tag">Seismic imaging</span><span class="tag">Volcanism</span></div>
+          <p class="links"><a href="https://doi.org/10.1029/2018JB015979" target="_blank" rel="noopener">Paper ↗</a></p>
+        </article></div>
+    </div></div>
+  </section>
 </main>
-<footer><div class="wrap">© 2026 Jung-Hun Song · <a href="index.html">Back to home</a></div></footer>
+
+
+<footer>
+  <div class="wrap">© 2026 Jung-Hun Song</div>
+</footer>
+
 </body>
 </html>

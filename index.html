@@ -5,374 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jung-Hun Song | Seismologist</title>
   <meta name="description" content="Personal research website of Jung-Hun Song, seismologist and planetary scientist." />
-
-  <style>
-    :root {
-      --bg: #f7f6f2;
-      --paper: #ffffff;
-      --text: #1c1c1c;
-      --muted: #646464;
-      --line: #d9d7d0;
-      --max: 1120px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
-    img { max-width: 100%; display: block; }
-
-    a {
-      color: inherit;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
-    }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    header {
-      background: rgba(247, 246, 242, 0.96);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(6px);
-    }
-
-    .header-inner {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .site-name {
-      text-decoration: none;
-      font-size: 1.18rem;
-      font-weight: 650;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 0.92rem;
-    }
-
-    nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
-
-    .hero {
-      min-height: 74vh;
-      display: flex;
-      align-items: flex-end;
-      background-color: #686868;
-      background-image:
-        linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.52)),
-        url("files/hero.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero-inner {
-      width: min(var(--max), calc(100% - 48px));
-      margin: 0 auto;
-      padding: 90px 0 78px;
-      color: white;
-    }
-
-    .hero-kicker {
-      margin: 0 0 14px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    .hero h1 {
-      margin: 0;
-      max-width: 900px;
-      font-size: clamp(2.5rem, 7vw, 5.6rem);
-      line-height: 0.98;
-      font-weight: 500;
-      letter-spacing: -0.045em;
-    }
-
-    .hero-sub {
-      margin: 26px 0 0;
-      max-width: 730px;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      line-height: 1.5;
-    }
-
-    section {
-      padding: 92px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: minmax(140px, 0.34fr) minmax(0, 1fr);
-      gap: 48px;
-    }
-
-    .section-label {
-      margin: 0;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      font-weight: 650;
-    }
-
-    .lead {
-      margin-top: 0;
-      font-size: clamp(1.45rem, 3vw, 2.15rem);
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      max-width: 850px;
-    }
-
-    .about-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) 260px;
-      gap: 36px;
-      align-items: start;
-    }
-
-    .about-copy { max-width: 820px; }
-    .about-copy p:last-child { margin-bottom: 0; }
-
-    .portrait-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      padding: 14px;
-    }
-
-    .portrait-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .portrait-caption {
-      margin: 12px 0 0;
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .affiliation {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-    }
-
-    .advisor {
-      margin-top: 16px;
-      color: var(--muted);
-    }
-
-    .advisor a { color: var(--text); }
-
-    .background {
-      margin-top: 12px;
-      color: var(--muted);
-    }
-
-    .background a { color: var(--text); }
-
-
-    .figure-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 34px;
-    }
-
-    .featured-figure {
-      margin-top: 0;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      overflow: hidden;
-      height: 100%;
-    }
-
-    .featured-figure img {
-      width: 100%;
-      height: auto;
-      display: block;
-      background: #f0f0f0;
-    }
-
-    .figure-text {
-      padding: 18px 22px 22px;
-      color: #474747;
-    }
-
-    .figure-title {
-      margin: 0 0 8px;
-      font-size: 0.98rem;
-      font-weight: 650;
-      color: var(--text);
-    }
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 18px;
-    }
-
-    .research-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      padding: 28px;
-      min-height: 235px;
-    }
-
-    .research-card .num {
-      color: var(--muted);
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-    }
-
-    .research-card h3 {
-      margin: 50px 0 14px;
-      font-size: 1.35rem;
-      line-height: 1.22;
-    }
-
-    .research-card p {
-      margin: 0;
-      color: #4f4f4f;
-      font-size: 0.96rem;
-    }
-
-    .publication-list { border-top: 1px solid var(--line); }
-
-    .pub {
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 22px;
-      padding: 25px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .pub-year {
-      color: var(--muted);
-      font-size: 0.9rem;
-      padding-top: 2px;
-    }
-
-    .pub-title {
-      margin: 0 0 5px;
-      font-weight: 650;
-      line-height: 1.35;
-    }
-
-    .pub-meta {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .pub-links {
-      margin: 8px 0 0;
-      font-size: 0.9rem;
-    }
-
-    .all-link {
-      display: inline-block;
-      margin-top: 28px;
-      font-weight: 650;
-      text-decoration: none;
-      border-bottom: 1px solid #777;
-    }
-
-    .news-placeholder {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      padding: 30px;
-    }
-
-    .news-placeholder p { margin: 0; }
-
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px 28px;
-      margin-top: 26px;
-    }
-
-    .contact-row a { font-weight: 550; }
-
-    footer {
-      padding: 38px 0 56px;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    @media (max-width: 900px) {
-      .about-panel { grid-template-columns: 1fr; }
-      .portrait-card { max-width: 260px; }
-    }
-
-    @media (max-width: 800px) {
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 18px 0;
-      }
-      nav { gap: 18px; }
-      .hero { min-height: 60vh; }
-      .section-grid { grid-template-columns: 1fr; gap: 24px; }
-      .research-grid { grid-template-columns: 1fr; }
-      .figure-gallery { grid-template-columns: 1fr; }
-      .research-card { min-height: 0; }
-      .research-card h3 { margin-top: 24px; }
-    }
-
-    @media (max-width: 520px) {
-      .wrap, .hero-inner { width: min(100% - 30px, var(--max)); }
-      section { padding: 66px 0; }
-      .pub { grid-template-columns: 1fr; gap: 6px; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+
 <header>
   <div class="wrap header-inner">
     <a class="site-name" href="index.html">Jung-Hun Song</a>
     <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
       <a href="publications.html">Publications</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+      <a href="data-software.html">Data &amp; Software</a>
+      <a href="index.html#contact">Contact</a>
       <a href="files/CV_JungHunSong.pdf" target="_blank" rel="noopener">CV</a>
     </nav>
   </div>
 </header>
+
 
 <main id="top">
   <section class="hero">
@@ -389,17 +39,14 @@
   <section id="about">
     <div class="wrap section-grid">
       <h2 class="section-label">About me</h2>
-
       <div class="about-panel">
         <div class="about-copy">
           <p class="lead">I am a seismologist interested in how rocky planets deform, fracture, and evolve.</p>
-
           <p>
             My research combines seismic observations with numerical wavefield simulations
             and inverse methods to investigate planetary seismicity, earthquake source processes,
             and the structure and dynamics of planetary interiors.
           </p>
-
           <p>
             Current interests include marsquakes and moonquakes, seismic source characterisation,
             seismic imaging, and the dynamics of Earth's lithosphere and deep mantle.
@@ -413,17 +60,13 @@
 
           <p class="advisor">
             Advisor:
-            <a href="https://profiles.imperial.ac.uk/doyeon.kim" target="_blank" rel="noopener">
-              Dr. Doyeon Kim
-            </a>
+            <a href="https://profiles.imperial.ac.uk/doyeon.kim" target="_blank" rel="noopener">Dr. Doyeon Kim</a>
           </p>
 
           <p class="background">
             <strong>Background.</strong> Ph.D. in Seismology, Seoul National University (2021).<br>
             PhD advisor:
-            <a href="https://seismo.snu.ac.kr/" target="_blank" rel="noopener">
-              Prof. Junkee Rhie ↗
-            </a>
+            <a href="https://seismo.snu.ac.kr/" target="_blank" rel="noopener">Prof. Junkee Rhie ↗</a>
           </p>
         </div>
 
@@ -439,56 +82,51 @@
     <div class="wrap">
       <div class="section-grid">
         <h2 class="section-label">Research</h2>
-        <div>
-          <p class="lead">From earthquake sources to the interiors of Earth, Mars, and the Moon.</p>
-        </div>
+        <div><p class="lead">From earthquake sources to the interiors of Earth, Mars, and the Moon.</p></div>
       </div>
 
       <div class="research-grid">
-        <article class="research-card">
-          <span class="num">01</span>
+        <a class="research-card" href="research-planetary.html">
+          <span class="num">01</span><span class="card-arrow">↗</span>
           <h3>Planetary seismology</h3>
           <p>Marsquakes, moonquakes, impact-generated seismic signals, planetary crustal structure, and the tectonic activity of rocky worlds.</p>
-        </article>
+        </a>
 
-        <article class="research-card">
-          <span class="num">02</span>
+        <a class="research-card" href="research-source.html">
+          <span class="num">02</span><span class="card-arrow">↗</span>
           <h3>Earthquake source physics</h3>
           <p>Moment tensors, seismic source characterisation, magnitude scaling, and waveform-based constraints on faulting processes.</p>
-        </article>
+        </a>
 
-        <article class="research-card">
-          <span class="num">03</span>
+        <a class="research-card" href="research-imaging.html">
+          <span class="num">03</span><span class="card-arrow">↗</span>
           <h3>Seismic imaging &amp; wavefields</h3>
           <p>Seismic tomography, full-wavefield simulations, inverse problems, and structural constraints on lithosphere and mantle dynamics.</p>
-        </article>
+        </a>
+
+        <a class="research-card" href="data-software.html">
+          <span class="num">04</span><span class="card-arrow">↗</span>
+          <h3>Datasets &amp; software</h3>
+          <p>Public seismic datasets, computational tools, numerical solvers, and reproducible resources supporting my research.</p>
+        </a>
       </div>
 
       <div class="figure-gallery">
-
         <figure class="featured-figure">
-          <img src="files/jeju-3d.jpg" alt="Three-dimensional illustration of magmatic and lithospheric structures beneath Jeju Volcanic Island">
+          <a href="research-imaging.html"><img src="files/jeju-3d.jpg" alt="Three-dimensional lithospheric and magmatic structures beneath Jeju Volcanic Island"></a>
           <figcaption class="figure-text">
-            <p class="figure-title">Research highlight — Jeju Volcanic Island</p>
-            <p>
-              Three-dimensional conceptual image of lithospheric and magmatic structures beneath
-              Jeju Volcanic Island, illustrating focused decompression melting and sublithospheric
-              magmatic structure.
-            </p>
+            <p class="figure-title">Jeju Volcanic Island</p>
+            <p>Three-dimensional view of lithospheric and magmatic structures beneath an intraplate volcanic system.</p>
           </figcaption>
         </figure>
 
         <figure class="featured-figure">
-          <img src="files/hawaii-ulvz-kernel.gif" alt="Sdiff amplitude kernel figure related to the Hawaiian ultralow-velocity zone study near the core-mantle boundary">
+          <a href="research-imaging.html"><img src="files/hawaii-ulvz-kernel.gif" alt="Animated Sdiff kernel amplitude for the Hawaiian ultralow-velocity zone study"></a>
           <figcaption class="figure-text">
-            <p class="figure-title">Research highlight — Hawaiian ULVZ</p>
-            <p>
-              Sdiff kernel-amplitude figure from research on the Hawaiian ultralow-velocity zone,
-              highlighting deep-mantle structure near the core–mantle boundary and its waveform sensitivity.
-            </p>
+            <p class="figure-title">Hawaiian ULVZ</p>
+            <p>Animated Sdiff finite-frequency sensitivity kernel illustrating wavefield sensitivity near the core–mantle boundary.</p>
           </figcaption>
         </figure>
-
       </div>
     </div>
   </section>
@@ -503,7 +141,7 @@
             <div>
               <p class="pub-title">Locating Moonquakes With Single-Station Seismology</p>
               <p class="pub-meta">D. Kim, J. H. Song &amp; N. C. Schmerr · <em>Geophysical Research Letters</em></p>
-              <p class="pub-links"><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2026GL122962" target="_blank" rel="noopener">Paper ↗</a></p>
+              <p class="pub-links"><a href="https://doi.org/10.1029/2026GL122962" target="_blank" rel="noopener">Paper ↗</a></p>
             </div>
           </article>
 
@@ -512,7 +150,7 @@
             <div>
               <p class="pub-title">Continuous Nonthermal Slab Gap Formed by Progressive Tearing Beneath Northeast Asia</p>
               <p class="pub-meta">J. H. Song, S. Kim, B. Tauzin &amp; J. Rhie · <em>Nature Communications</em></p>
-              <p class="pub-links"><a href="https://www.nature.com/articles/s41467-026-75246-8" target="_blank" rel="noopener">Paper ↗</a></p>
+              <p class="pub-links"><a href="https://doi.org/10.1038/s41467-026-75246-8" target="_blank" rel="noopener">Paper ↗</a></p>
             </div>
           </article>
 
@@ -525,7 +163,6 @@
             </div>
           </article>
         </div>
-
         <a class="all-link" href="publications.html">View all publications →</a>
       </div>
     </div>
@@ -548,11 +185,7 @@
       <h2 class="section-label">Contact</h2>
       <div>
         <p class="lead">Interested in planetary seismology, earthquake sources, or seismic wavefields? Get in touch.</p>
-        <p>
-          Department of Earth Science and Engineering<br>
-          Imperial College London<br>
-          London, United Kingdom
-        </p>
+        <p>Department of Earth Science and Engineering<br>Imperial College London<br>London, United Kingdom</p>
         <div class="contact-row">
           <a href="mailto:j.song1@imperial.ac.uk">Email</a>
           <a href="https://orcid.org/0000-0002-3496-4436" target="_blank" rel="noopener">ORCID</a>
@@ -565,8 +198,10 @@
   </section>
 </main>
 
+
 <footer>
   <div class="wrap">© 2026 Jung-Hun Song</div>
 </footer>
+
 </body>
 </html>
