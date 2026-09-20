@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Stories | Jung-Hun Song</title>
+  <meta name="description" content="Selected research stories by Jung-Hun Song: planetary seismology, lunar seismology, deep mantle structure, and seismic imaging." />
+  <style>
+
+
+:root {
+  --bg: #f7f6f2;
+  --paper: #ffffff;
+  --text: #1c1c1c;
+  --muted: #66645f;
+  --line: #d9d7d0;
+  --tag-bg: #ebe9e2;
+  --max: 1120px;
+  --soft: #efede7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+
+header {
+  background: rgba(247,246,242,.96);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 20;
+  backdrop-filter: blur(8px);
+}
+.header-inner {
+  min-height: 82px; display: flex; align-items: center;
+  justify-content: space-between; gap: 24px;
+}
+.site-name {
+  text-decoration: none; font-size: 1.18rem; font-weight: 650;
+  letter-spacing: .01em; white-space: nowrap;
+}
+nav { display: flex; gap: 25px; flex-wrap: wrap; justify-content: flex-end; }
+nav a { text-decoration: none; color: #333; font-size: .9rem; }
+nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+.hero {
+  min-height: 74vh;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0f1318;
+  background-image:
+    linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.34)),
+    url("files/main-hero.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+}
+.hero-inner {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto; padding: 90px 0 78px; color: white;
+}
+.hero-kicker, .eyebrow {
+  margin: 0 0 14px; font-size: .78rem; font-weight: 650;
+  text-transform: uppercase; letter-spacing: .16em;
+}
+.hero h1 {
+  margin: 0; max-width: 900px;
+  font-size: clamp(2.5rem,7vw,5.6rem);
+  line-height: .98; font-weight: 500; letter-spacing: -.045em;
+}
+.hero-sub {
+  margin: 26px 0 0; max-width: 730px;
+  font-size: clamp(1.05rem,2vw,1.35rem); line-height: 1.5;
+}
+
+section { padding: 92px 0; border-bottom: 1px solid var(--line); }
+.section-grid {
+  display: grid; grid-template-columns: minmax(140px,.34fr) minmax(0,1fr);
+  gap: 48px;
+}
+.section-label {
+  margin: 0; font-size: .78rem; text-transform: uppercase;
+  letter-spacing: .16em; color: var(--muted); font-weight: 650;
+}
+.lead {
+  margin-top: 0; font-size: clamp(1.45rem,3vw,2.15rem);
+  line-height: 1.35; letter-spacing: -.02em; max-width: 850px;
+}
+.about-panel {
+  display: grid; grid-template-columns: minmax(0,1.25fr) 260px;
+  gap: 36px; align-items: start;
+}
+.about-copy { max-width: 820px; }
+.portrait-card { background: var(--paper); border: 1px solid var(--line); padding: 14px; }
+.portrait-caption { margin: 12px 0 0; font-size: .86rem; color: var(--muted); }
+.affiliation {
+  margin-top: 32px; padding-top: 24px;
+  border-top: 1px solid var(--line); color: var(--muted);
+}
+.advisor, .background { margin-top: 12px; color: var(--muted); }
+.advisor a, .background a { color: var(--text); }
+
+.research-grid {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 22px; margin-top: 22px;
+}
+.research-card {
+  display: block; position: relative; text-decoration: none;
+  background: var(--paper); border: 1px solid var(--line);
+  padding: 28px; min-height: 255px;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.research-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.07);
+  border-color: #bdbab1;
+}
+.research-card .num { color: var(--muted); font-size: .8rem; letter-spacing: .08em; }
+.research-card h3 { margin: 48px 0 14px; font-size: 1.38rem; line-height: 1.22; }
+.research-card p { margin: 0; color: #4f4f4f; font-size: .96rem; max-width: 470px; }
+.card-arrow { position: absolute; right: 24px; top: 23px; font-size: 1.15rem; color: var(--muted); }
+
+.figure-gallery {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px; margin-top: 34px;
+}
+.featured-figure {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  height: 100%;
+}
+.featured-card {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.featured-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.07);
+}
+.featured-figure img {
+  width: 100%;
+  height: 330px;
+  object-fit: contain;
+  object-position: center;
+  background: #f3f1eb;
+}
+.figure-text { padding: 18px 22px 22px; color: #474747; }
+.figure-title { margin: 0 0 8px; font-size: .98rem; font-weight: 650; color: var(--text); }
+.figure-text p:last-child { margin-bottom: 0; }
+.figure-more {
+  margin-top: 12px !important;
+  font-size: .84rem;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.publication-list { border-top: 1px solid var(--line); }
+.pub {
+  display: grid; grid-template-columns: 72px 1fr; gap: 22px;
+  padding: 25px 0; border-bottom: 1px solid var(--line);
+}
+.pub-year { color: var(--muted); font-size: .9rem; padding-top: 2px; }
+.pub-title { margin: 0 0 5px; font-weight: 650; line-height: 1.35; }
+.pub-meta { margin: 0; color: var(--muted); font-size: .93rem; }
+.pub-links { margin: 8px 0 0; font-size: .9rem; }
+.all-link {
+  display: inline-block; margin-top: 28px; font-weight: 650;
+  text-decoration: none; border-bottom: 1px solid #777;
+}
+
+.news-placeholder { background: var(--paper); border: 1px solid var(--line); padding: 30px; }
+.contact-row { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 26px; }
+.contact-row a { font-weight: 550; }
+
+.page-head { padding: 105px 0 74px; border-bottom: 1px solid var(--line); }
+.page-head .eyebrow { color: var(--muted); }
+.page-head h1 {
+  font-size: clamp(3rem,7vw,6.3rem); line-height: .98;
+  letter-spacing: -.05em; font-weight: 500; margin: 0;
+}
+.page-intro { max-width: 800px; margin-top: 28px; color: #454545; font-size: 1.12rem; }
+.breadcrumb { margin-bottom: 26px; font-size: .9rem; color: var(--muted); }
+.breadcrumb a { text-decoration: none; }
+
+.detail-section { padding: 68px 0; }
+.detail-grid {
+  display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 48px;
+}
+.detail-title {
+  margin: 0; font-size: .8rem; text-transform: uppercase;
+  letter-spacing: .15em; color: var(--muted);
+}
+.copy { max-width: 820px; }
+.copy h2 { margin-top: 0; font-size: 2rem; letter-spacing: -.02em; line-height: 1.2; }
+.copy h3 { margin-top: 34px; margin-bottom: 8px; font-size: 1.15rem; }
+.copy p { margin-top: 0; }
+
+.theme-list {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 16px; margin-top: 26px;
+}
+.theme {
+  background: var(--paper); border: 1px solid var(--line);
+  padding: 22px;
+}
+.theme h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.theme p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+.visual {
+  margin-top: 30px; background: var(--paper); border: 1px solid var(--line);
+  padding: 22px;
+}
+.visual svg { width: 100%; height: auto; display: block; }
+.visual-caption { margin: 15px 0 0; font-size: .88rem; color: var(--muted); }
+
+.refs { border-top: 1px solid var(--line); }
+.ref {
+  display: grid; grid-template-columns: minmax(0,1fr) auto;
+  gap: 20px; align-items: start; padding: 19px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ref-title { font-weight: 650; margin: 0 0 4px; line-height: 1.35; }
+.ref-meta { color: var(--muted); margin: 0; font-size: .91rem; }
+.ref-link { white-space: nowrap; font-size: .9rem; }
+.status {
+  display: inline-block; margin-left: 7px; padding: 2px 8px;
+  border: 1px solid #aaa; border-radius: 999px; font-size: .73rem;
+  color: #555; vertical-align: 1px; font-weight: 500;
+}
+
+.big-figure { margin: 30px 0 0; background: var(--paper); border: 1px solid var(--line); }
+.big-figure img { width: 100%; }
+.big-figure figcaption { padding: 18px 22px 22px; color: var(--muted); font-size: .91rem; }
+
+.tool-grid, .data-grid {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 24px;
+}
+.resource-card {
+  background: var(--paper); border: 1px solid var(--line); padding: 23px;
+}
+.resource-card h3 { margin: 0 0 8px; font-size: 1.08rem; }
+.resource-card p { margin: 0 0 13px; color: var(--muted); font-size: .93rem; }
+.resource-card a { font-size: .9rem; font-weight: 600; }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+.tag {
+  display: inline-block; padding: 4px 9px; background: var(--tag-bg);
+  border-radius: 999px; color: #55524b; font-size: .72rem; line-height: 1.2;
+}
+
+footer {
+  padding: 38px 0 56px; color: var(--muted); font-size: .88rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .about-panel { grid-template-columns: 1fr; }
+  .portrait-card { max-width: 260px; }
+}
+@media (max-width: 800px) {
+  .header-inner { align-items: flex-start; flex-direction: column; padding: 18px 0; }
+  nav { gap: 18px; }
+  .hero { min-height: 60vh; }
+  .section-grid, .detail-grid { grid-template-columns: 1fr; gap: 24px; }
+  .research-grid, .figure-gallery, .theme-list, .tool-grid, .data-grid { grid-template-columns: 1fr; }
+  .featured-figure img { height: auto; max-height: 460px; }
+  .research-card { min-height: 0; }
+  .research-card h3 { margin-top: 26px; }
+}
+@media (max-width: 520px) {
+  .wrap, .hero-inner { width: min(100% - 30px,var(--max)); }
+  section { padding: 66px 0; }
+  .pub, .ref { grid-template-columns: 1fr; gap: 7px; }
+}
+
+
+/* Publications page hero uses the former homepage background image. */
+.publication-hero {
+  position: relative;
+  padding: 120px 0 92px;
+  border-bottom: 1px solid var(--line);
+  color: #fff;
+  background-color: #555;
+  background-image:
+    linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.56)),
+    url("files/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.publication-hero .eyebrow,
+.publication-hero .breadcrumb,
+.publication-hero .page-intro {
+  color: rgba(255,255,255,.9);
+}
+
+.publication-hero .breadcrumb a,
+.publication-hero .contact-row a {
+  color: #fff;
+}
+
+.publication-hero h1 {
+  color: #fff;
+}
+
+  
+/* Lighter, more personal homepage hero */
+.hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  background-color: #0f1318;
+  background-image:
+    linear-gradient(rgba(0,0,0,.06), rgba(0,0,0,.25)),
+    url("files/main-hero.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+}
+.hero-inner {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 100px 0 84px;
+  color: white;
+}
+.hero-kicker {
+  margin: 0 0 18px;
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: .08em;
+  opacity: .92;
+}
+.hero h1 {
+  margin: 0;
+  max-width: 820px;
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  line-height: .94;
+  font-weight: 500;
+  letter-spacing: -.055em;
+}
+.hero-sub {
+  margin: 24px 0 0;
+  max-width: 650px;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.55;
+  color: rgba(255,255,255,.92);
+}
+.hero-links {
+  display: flex;
+  gap: 18px 26px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.hero-links a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.65);
+  padding-bottom: 2px;
+  font-size: .92rem;
+}
+.story-teasers {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+.story-teaser {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.story-teaser:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.07);
+}
+.story-teaser img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  background: #f3f1eb;
+}
+.story-teaser .story-copy { padding: 20px 22px 23px; }
+.story-teaser .story-meta {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.story-teaser h3 {
+  margin: 0 0 9px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+.story-teaser p {
+  margin: 0;
+  color: #555;
+  font-size: .91rem;
+}
+@media (max-width: 800px) {
+  .story-teasers { grid-template-columns: 1fr; }
+  .story-teaser img { height: auto; max-height: 420px; object-fit: contain; }
+}
+
+
+
+.story-head {
+  padding: 110px 0 74px;
+  border-bottom: 1px solid var(--line);
+}
+.story-head h1 {
+  margin: 0;
+  font-size: clamp(3.2rem,7vw,6.5rem);
+  line-height: .96;
+  letter-spacing: -.05em;
+  font-weight: 500;
+}
+.story-head p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+.paper-story {
+  padding: 88px 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 95px;
+}
+.paper-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr);
+  gap: 50px;
+  align-items: start;
+}
+.paper-visual {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 14px;
+  position: sticky;
+  top: 108px;
+}
+.paper-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 680px;
+  object-fit: contain;
+  background: #f3f1eb;
+}
+.paper-visual figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+.paper-journal {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.paper-story h2 {
+  margin: 0;
+  font-size: clamp(2rem,4vw,3.3rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+.paper-authors {
+  margin: 14px 0 30px;
+  color: var(--muted);
+  font-size: .92rem;
+}
+.story-block {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.story-block h3 {
+  margin: 0 0 10px;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--muted);
+}
+.story-block p { margin: 0; }
+.why {
+  background: var(--paper);
+  border-left: 3px solid #333;
+  padding: 20px 22px;
+}
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin-top: 28px;
+}
+.paper-actions a {
+  font-weight: 650;
+  font-size: .92rem;
+}
+.current-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 8px;
+  border: 1px solid #aaa;
+  border-radius: 999px;
+  font-size: .7rem;
+  vertical-align: middle;
+  letter-spacing: .02em;
+}
+@media (max-width: 850px) {
+  .paper-story-grid { grid-template-columns: 1fr; }
+  .paper-visual { position: static; }
+}
+
+  
+.paper-visual-stack {
+  position: sticky;
+  top: 108px;
+  display: grid;
+  gap: 18px;
+}
+.paper-visual-stack .paper-visual {
+  position: static;
+  top: auto;
+}
+@media (max-width: 860px) {
+  .paper-visual-stack { position: static; }
+}
+
+
+/* Wider research-story layout for figure-rich papers */
+.paper-story > .wrap {
+  width: min(1360px, calc(100% - 48px));
+}
+
+.paper-story-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .92fr);
+  gap: 44px;
+}
+
+.paper-visual {
+  padding: 12px;
+}
+
+.paper-visual img {
+  width: 100%;
+  max-height: 900px;
+  object-fit: contain;
+}
+
+.paper-visual-stack {
+  width: 100%;
+}
+
+.paper-visual-stack .paper-visual img {
+  width: 100%;
+  max-height: 760px;
+}
+
+@media (max-width: 980px) {
+  .paper-story > .wrap {
+    width: min(100% - 36px, 900px);
+  }
+
+  .paper-story-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .paper-visual,
+  .paper-visual-stack {
+    position: static;
+  }
+
+  .paper-visual img,
+  .paper-visual-stack .paper-visual img {
+    max-height: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .paper-story > .wrap {
+    width: min(100% - 24px, 900px);
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap header-inner">
+    <a class="site-name" href="index.html">Jung-Hun Song</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="featured-papers.html">Stories</a>
+      <a href="publications.html">Publications</a>
+      <a href="data-software.html">Data &amp; Software</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="files/CV_JungHunSong.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="story-head">
+    <div class="wrap">
+      <p class="eyebrow">Selected work</p>
+      <h1>Research stories.</h1>
+      <p>
+        Short, visual explanations of the scientific questions behind selected papers:
+        what we measured, what we found, and why the result matters.
+      </p>
+    </div>
+  </section>
+
+  <section class="paper-story" id="moonquake">
+    <div class="wrap paper-story-grid">
+      <figure class="paper-visual">
+        <img src="files/moonquake_location.jpg" alt="Single-station event locations for meteoroid impacts, shallow moonquakes, and deep moonquakes">
+        <figcaption>Single-station location examples using Apollo seismic observations.</figcaption>
+      </figure>
+      <div>
+        <p class="paper-journal">Geophysical Research Letters · 2026</p>
+        <h2>Locating Moonquakes With Single-Station Seismology</h2>
+        <p class="paper-authors">Doyeon Kim, Jung-Hun Song &amp; Nicholas C. Schmerr</p>
+
+        <div class="story-block">
+          <h3>The question</h3>
+          <p>
+            The Moon strongly scatters seismic waves, producing long, complex signals in which directional
+            particle motion has traditionally been considered difficult to recover. Can those scattered
+            waveforms still reveal where a moonquake came from — using only a single seismic station?
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Abstract · short version</h3>
+          <p>
+            We use a detailed multi-time-frequency polarization analysis to follow subtle changes in P-wave
+            particle motion through the scattered lunar wavefield. This recovers the direction from which
+            the waves arrive, including back-azimuth and inclination, and combines it with S–P differential
+            times to constrain event distance and depth. Apollo artificial impacts with known locations
+            provide a benchmark, while natural moonquake locations remain consistent with earlier
+            multi-station solutions.
+          </p>
+        </div>
+
+        <div class="story-block why">
+          <h3>Why it matters</h3>
+          <p>
+            The result shows that even strongly scattered lunar seismograms still retain measurable
+            directional information. Recovering that hidden direction makes it possible to locate
+            moonquakes with a single station — especially valuable for future lunar missions where
+            a dense seismic network may not be available.
+          </p>
+        </div>
+
+        <div class="paper-actions">
+          <a href="https://doi.org/10.1029/2026GL122962" target="_blank" rel="noopener">Paper ↗</a>
+          <a href="https://doi.org/10.6084/m9.figshare.32814290" target="_blank" rel="noopener">Dataset &amp; code ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="paper-story" id="valles">
+    <div class="wrap paper-story-grid">
+      <figure class="paper-visual">
+        <img src="files/VallesMarineris.jpg" alt="Tectonic interpretation of deep faulting beneath Valles Marineris">
+        <figcaption>Schematic tectonic setting and inferred deep faulting geometry beneath Valles Marineris.</figcaption>
+      </figure>
+      <div>
+        <p class="paper-journal">Nature Communications · Accepted</p>
+        <h2>Active Crustal Straining and Fault Reactivation at Valles Marineris</h2>
+        <p class="paper-authors">Jung-Hun Song, Doyeon Kim, Folarin Kolawole, Joel M. Davis, Rebekah Parry &amp; Ross Maguire</p>
+
+        <div class="story-block">
+          <h3>The question</h3>
+          <p>
+            Mars is a cold, slowly evolving planet without plate tectonics, yet Valles Marineris preserves immense,
+            billion-year-old fault systems. How can such an old, cold planet remain tectonically active today?
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Research summary</h3>
+          <p>
+            The marsquake beneath Valles Marineris is confirmed as tectonic rather than surficial and is traced
+            to deep, dominantly strike-slip faulting. The focal mechanism indicates compression roughly parallel
+            to Valles Marineris and extension roughly perpendicular to it, a geometry consistent with reactivation
+            of ancient canyon faults. This pattern can be understood within a broader stress field shaped by
+            long-term planetary contraction and Tharsis-related loading, while local processes within the canyon
+            may further modify the crustal stresses.
+          </p>
+        </div>
+
+        <div class="story-block why">
+          <h3>Why it matters</h3>
+          <p>
+            Valles Marineris, the Solar System’s largest canyon, is tectonically active today: a marsquake beneath
+            it — confirmed tectonic, not surficial — was traced to deep fault slip, showing that billion-year-old
+            faults can still rupture on Mars.
+          </p>
+        </div>
+
+        <div class="paper-actions">
+          <a href="publications.html">Publication status ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="paper-story" id="hawaii">
+    <div class="wrap paper-story-grid">
+      <div class="paper-visual-stack">
+        <figure class="paper-visual">
+          <img src="files/sequencer.jpg" alt="Sequenced Pdiff waveforms in the Hawai‘i region used to identify paths affected by the Hawaiian mega-ULVZ">
+          <figcaption>
+            Sequenced Pdiff waveforms in the Hawai‘i region, showing how subtle waveform differences help distinguish paths affected by the deep ULVZ from those that are not.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-visual">
+          <img src="files/wavefield.jpg" alt="Wavefield snapshots showing seismic-wave interaction with the Hawaiian mega-ULVZ">
+          <figcaption>
+            Wavefield snapshots showing how diffracted seismic waves interact with deep structure beneath Hawai'i.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-visual">
+          <img src="files/image3.gif" alt="Animated Sdiff wavefield sensitivity near the Hawaiian mega-ULVZ">
+          <figcaption>
+            Animated Sdiff wavefield sensitivity around the Hawaiian mega-ULVZ.
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <p class="paper-journal">Science Advances · 2026</p>
+        <h2>Seismic and Mineralogical Evidence for an Iron-Rich Mega Ultralow-Velocity Zone Beneath Hawai'i</h2>
+        <p class="paper-authors">Doyeon Kim, Jung-Hun Song, Vasilije V. Dobrosavljevic &amp; Vedran Lekić</p>
+
+        <div class="story-block">
+          <h3>The question</h3>
+          <p>
+            Ultralow-velocity zones (ULVZs) are unusual patches just above Earth's core where seismic waves
+            slow down dramatically. The structure beneath Hawai'i is exceptionally large — a mega-ULVZ —
+            and sits near the deep root of the Hawaiian mantle plume. What is this mysterious body made of:
+            partially molten rock, chemically distinct material, or both?
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Abstract · short version</h3>
+          <p>
+            We jointly analyse P and S waves that skim along Earth's core and interact with this deep structure.
+            Comparing how strongly the two wave types slow down allows us to constrain its physical properties.
+            The shear-to-compressional velocity-reduction ratio is about 1–1.3, and mineralogical modelling
+            shows that this behaviour is consistent with solid rock enriched in iron-rich magnesiowüstite,
+            rather than requiring a dominantly molten layer.
+          </p>
+        </div>
+
+        <div class="story-block why">
+          <h3>Why it matters</h3>
+          <p>
+            The result connects seismic waveforms to the composition of material at the core–mantle boundary.
+            An iron-rich solid reservoir offers a physical link between deep chemical heterogeneity and the
+            roots of mantle plumes, and suggests that different ULVZs may form through different processes.
+          </p>
+        </div>
+
+        <div class="paper-actions">
+          <a href="https://doi.org/10.1126/sciadv.adz1962" target="_blank" rel="noopener">Paper ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="paper-story" id="slab-gap">
+    <div class="wrap paper-story-grid">
+      <figure class="paper-visual">
+        <img src="files/mtz.jpg" alt="Seismic and thermal structure of the mantle transition zone slab gap beneath Northeast Asia">
+        <figcaption>
+          Seismic structure and thermal constraints on a continuous slab gap in the mantle transition zone beneath Northeast Asia.
+        </figcaption>
+      </figure>
+      <div>
+        <p class="paper-journal">Nature Communications · 2026</p>
+        <h2>Continuous Nonthermal Slab Gap Formed by Progressive Tearing Beneath Northeast Asia</h2>
+        <p class="paper-authors">Jung-Hun Song, Seongryong Kim, Benoît Tauzin &amp; Junkee Rhie</p>
+
+        <div class="story-block">
+          <h3>The question</h3>
+          <p>
+            Oceanic plates do not simply disappear after they sink into the mantle. Beneath Northeast Asia,
+            the Pacific plate has descended and become stalled in the mantle transition zone, around 600 km deep.
+            Seismic images reveal a long break cutting through this buried slab. Did hot mantle open this gap,
+            or did the plate itself gradually tear apart?
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Abstract · short version</h3>
+          <p>
+            We image a continuous ~1000-km-long arcuate gap in the stagnant Pacific slab within the mantle transition
+            zone beneath Northeast Asia. Dense-array teleseismic tomography resolves sharp lateral boundaries around
+            the gap, while 3-D waveform modelling independently requires those strong velocity contrasts. By jointly
+            analysing P- and S-wave velocities with mantle-transition-zone thickness, we find that temperatures inside
+            the gap are comparable to the ambient upper mantle and more than 200 °C below plume-like values. The shape
+            of the gap follows the path of a migrating triple junction, consistent with progressive tearing during
+            plate-boundary reorganisation.
+          </p>
+        </div>
+
+        <div class="story-block why">
+          <h3>Why it matters</h3>
+          <p>
+            The geometry of the buried Pacific plate records roughly 30 million years of progressive tearing during
+            plate-boundary reorganisation. At the same time, the gap is not anomalously hot, challenging the common
+            interpretation of slab gaps as windows for hot mantle upwelling. Together, these observations connect
+            present-day seismic structure directly to the long-term evolution of the plate.
+          </p>
+        </div>
+
+        <div class="paper-actions">
+          <a href="https://doi.org/10.1038/s41467-026-75246-8" target="_blank" rel="noopener">Paper ↗</a>
+          <a href="https://doi.org/10.6084/m9.figshare.30370507" target="_blank" rel="noopener">Dataset &amp; code ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="paper-story" id="jeju">
+    <div class="wrap paper-story-grid">
+      <figure class="paper-visual">
+        <img src="files/jeju-3d.jpg" alt="Three-dimensional lithospheric and magmatic structure beneath Jeju Volcanic Island">
+        <figcaption>Three-dimensional view of the lithospheric structure beneath Jeju Volcanic Island.</figcaption>
+      </figure>
+      <div>
+        <p class="paper-journal">Journal of Geophysical Research: Solid Earth · 2018</p>
+        <h2>Imaging of Lithospheric Structure Beneath Jeju Volcanic Island by Teleseismic Traveltime Tomography</h2>
+        <p class="paper-authors">Jung-Hun Song, Seongryong Kim, Junkee Rhie, Sang-Hyun Lee, YoungHee Kim &amp; Tae-Seob Kang</p>
+
+        <div class="story-block">
+          <h3>The question</h3>
+          <p>
+            Jeju — home to UNESCO-listed volcanic landscapes — is a young volcanic island isolated from
+            conventional plate boundaries. How did such intraplate volcanism arise, and does its deep
+            magmatic system still leave a detectable signature beneath the island today?
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Abstract · short version</h3>
+          <p>
+            Teleseismic traveltime tomography from a dense temporary broadband array images a prominent
+            low-velocity anomaly beneath the central volcanic edifice at roughly 50–60 km depth, with
+            shallower low-velocity branches extending upward through the lithosphere. The geometry is
+            consistent with focused decompression melting below the lithosphere followed by complex
+            magma transport and interaction at shallower levels.
+          </p>
+        </div>
+
+        <div class="story-block why">
+          <h3>Why it matters</h3>
+          <p>
+            The study provides a three-dimensional seismic view beneath an isolated young volcanic island,
+            showing how localized volcanism can develop far from a plate boundary. The low-velocity structure
+            preserves a deep seismic signature of the system that fed Jeju, while also constraining the
+            transition between continental lithosphere and the underlying asthenosphere along the margin of
+            Northeast Asia.
+          </p>
+        </div>
+
+        <div class="paper-actions">
+          <a href="https://doi.org/10.1029/2018JB015979" target="_blank" rel="noopener">Paper ↗</a>
+          <a href="https://doi.org/10.6084/m9.figshare.6149858" target="_blank" rel="noopener">Dataset ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Jung-Hun Song</div>
+</footer>
+</body>
+</html>
