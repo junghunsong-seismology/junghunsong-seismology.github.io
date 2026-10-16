@@ -570,6 +570,56 @@ header nav a:hover {
   }
 }
 
+
+/* News */
+.news-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+  gap: 32px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 26px 0 28px;
+}
+.news-copy { min-width: 0; }
+.news-image { margin: 0; min-width: 0; }
+.news-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #efede7;
+}
+.news-image figcaption {
+  margin-top: 8px;
+  font-size: .72rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.news-image figcaption a { color: inherit; }
+@media (max-width: 920px) {
+  .news-item { grid-template-columns: 1fr; gap: 24px; }
+}
+.news-meta {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+.news-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+.news-item p {
+  margin: 0 0 14px;
+  color: #4f4f4f;
+}
+.news-link {
+  font-weight: 650;
+  text-decoration: none;
+  border-bottom: 1px solid #777;
+}
+
 </style>
 </head>
 <body>
@@ -640,6 +690,29 @@ header nav a:hover {
     </div>
   </section>
 
+  <section id="news">
+    <div class="wrap section-grid">
+      <h2 class="section-label">News</h2>
+      <div class="news-item">
+        <div class="news-copy">
+          <p class="news-meta">Imperial College London · 15 October 2026</p>
+          <h3>Giant canyon on Mars is still tectonically active today</h3>
+          <p>
+            Imperial News highlights our newly published Nature Communications study on present-day
+            tectonic activity and deep fault reactivation beneath Valles Marineris.
+          </p>
+          <a class="news-link" href="https://www.imperial.ac.uk/news/articles/engineering/earth-science/2026/giant-canyon-on-mars-is-still-tectonically-active-today/" target="_blank" rel="noopener">Read the Imperial story ↗</a>
+        </div>
+        <figure class="news-image">
+          <img src="files/VM_mola_themis.png" alt="Map of western Valles Marineris with a yellow star marking the proposed marsquake epicentre" loading="lazy" decoding="async">
+          <figcaption>
+            Map of western Valles Marineris with the yellow star indicating the epicentre of the marsquake posited in the study. Credit: J Davis
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section id="research">
     <div class="wrap">
       <div class="section-grid">
@@ -694,7 +767,7 @@ header nav a:hover {
 <a class="story-teaser" href="featured-papers.html#valles">
             <img src="files/VallesMarineris.jpg" alt="Tectonic interpretation of deep faulting beneath Valles Marineris">
             <div class="story-copy">
-              <p class="story-meta">Nature Communications · Accepted</p>
+              <p class="story-meta">Nature Communications · 2026</p>
               <h3>How can cold Mars still be tectonically active?</h3>
               <p>On cold Mars, a tectonic marsquake beneath Valles Marineris — the Solar System’s largest canyon — shows that billion-year-old faults can still rupture today.</p>
             </div>
@@ -732,6 +805,7 @@ header nav a:hover {
       </div>
     </div>
   </section>
+
 <section id="contact">
     <div class="wrap section-grid">
       <h2 class="section-label">Contact</h2>
