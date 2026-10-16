@@ -282,7 +282,20 @@ footer {
   color: #fff;
 }
 
-  </style>
+  
+/* Compact, consistent publication/data links in selected references */
+.ref-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: start;
+  gap: 6px 16px;
+}
+@media (max-width: 520px) {
+  .ref-actions { justify-content: flex-start; }
+}
+
+</style>
 </head>
 <body>
 
@@ -292,6 +305,7 @@ footer {
     <nav aria-label="Main navigation">
       <a href="index.html#about">About</a>
       <a href="index.html#research">Research</a>
+      <a href="featured-papers.html">Stories</a>
       <a href="publications.html">Publications</a>
       <a href="data-software.html">Data &amp; Software</a>
       <a href="index.html#contact">Contact</a>
@@ -340,16 +354,33 @@ footer {
     <h2 class="detail-title">Selected references</h2>
     <div class="refs">
       <div class="ref">
+        <div><p class="ref-title">How Large Are Marsquakes? Revisiting Magnitude Scaling and Implications for Marsquakes and Meteoroid Impacts</p><p class="ref-meta">Song, J. H., Kim, D., Collins, G. S., Tsai, V. C. &amp; Lognonné, P. · Journal of Geophysical Research: Planets (2026)</p></div>
+        <div class="ref-actions">
+          <a class="ref-link" href="https://doi.org/10.1029/2026JE009988" target="_blank" rel="noopener">Paper ↗</a>
+          <a class="ref-link" href="https://doi.org/10.6084/m9.figshare.33260658" target="_blank" rel="noopener">Dataset &amp; code ↗</a>
+        </div>
+      </div>
+      <div class="ref">
+        <div><p class="ref-title">Active Crustal Straining and Fault Reactivation at Valles Marineris</p><p class="ref-meta">Song, J. H., Kim, D., Kolawole, F., Davis, J. M., Parry, R. &amp; Maguire, R. · Nature Communications (2026)</p></div>
+        <div class="ref-actions">
+          <a class="ref-link" href="https://doi.org/10.1038/s41467-026-78193-6" target="_blank" rel="noopener">Paper ↗</a>
+          <a class="ref-link" href="https://doi.org/10.6084/m9.figshare.32144254" target="_blank" rel="noopener">Data ↗</a>
+        </div>
+      </div>
+      <div class="ref">
         <div><p class="ref-title">Moment Tensor Solutions for Earthquakes in the Southern Korean Peninsula Using Three-Dimensional Seismic Waveform Simulations</p><p class="ref-meta">Song, J. H., Kim, S., Rhie, J. &amp; Park, D. · Frontiers in Earth Science (2022)</p></div>
-        <a class="ref-link" href="https://doi.org/10.3389/feart.2022.945022" target="_blank" rel="noopener">Paper ↗</a>
+        <div class="ref-actions">
+          <a class="ref-link" href="https://doi.org/10.3389/feart.2022.945022" target="_blank" rel="noopener">Paper ↗</a>
+          <a class="ref-link" href="https://www.frontiersin.org/articles/10.3389/feart.2022.945022/full#supplementary-material" target="_blank" rel="noopener">Dataset ↗</a>
+        </div>
       </div>
       <div class="ref">
-        <div><p class="ref-title">Three-Dimensional Seismic-Wave Propagation Simulations in the Southern Korean Peninsula Using Pseudodynamic Rupture Models</p><p class="ref-meta">Lee, J., Song, J. H., Kim, S., Rhie, J. &amp; Song, S. G. · BSSA (2022)</p></div>
-        <a class="ref-link" href="https://doi.org/10.1785/0120210172" target="_blank" rel="noopener">Paper ↗</a>
+        <div><p class="ref-title">Three-Dimensional Seismic-Wave Propagation Simulations in the Southern Korean Peninsula Using Pseudodynamic Rupture Models</p><p class="ref-meta">Lee, J., Song, J. H., Kim, S., Rhie, J. &amp; Song, S. G. · Bulletin of the Seismological Society of America (2022)</p></div>
+        <div class="ref-actions">
+          <a class="ref-link" href="https://doi.org/10.1785/0120210172" target="_blank" rel="noopener">Paper ↗</a>
+        </div>
       </div>
-      <div class="ref">
-        <div><p class="ref-title">New Magnitude Scaling and Seismic Source Characterisation for Marsquakes and Meteoroid Impacts <span class="status">Under review</span></p><p class="ref-meta">Song, J. H., Kim, D., Collins, G. S., Tsai, V. C. &amp; Lognonné, P.</p></div>
-      </div>
+    
     </div>
   </div>
 </section>
